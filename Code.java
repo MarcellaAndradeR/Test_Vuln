@@ -33,7 +33,7 @@ public class ExecuteSearch {
   public User getUser(String username, String password) {
     String sql = "SELECT * FROM Users WHERE username=? AND password=" + password;  //possivel sql injection
      
-  try {
+    try {
     Statement statement = conn.createStatement();
     ResultSet result = statement.executeQuery(sql);
      
